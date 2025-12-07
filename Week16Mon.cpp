@@ -8,16 +8,10 @@ void heapsort(vector<T>& arr) {
     MinHeap<T> h;
     for (T element : arr) {
         h.insert(element);
-        vector<T> data = h.getArray();
-        for (int i = 0; i < data.size(); i++) {
-            cout << data[i] << " ";
-        }
-        cout << endl;
     }
     int index = 0;
     while(!h.empty()) {
         arr[index] = h.removeRoot();
-        cout << endl;
         index++;
     }
     // TODO: Insert all elements into heap using sift-down insert from lecture
